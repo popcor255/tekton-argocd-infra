@@ -17,8 +17,8 @@ spec:
         version: v1
     spec:
       containers:
-        - image: fake-registry/fake-repo/invalid-image
-          imagePullPolicy: Always
-          name: ui
-          ports:
-            - containerPort: 3000
+      - image: image-registry.openshift-image-registry.svc:5000/tekton-argocd/app:b711ac7
+        imagePullPolicy: Always
+        name: ui
+        ports:
+        - containerPort: 3000
