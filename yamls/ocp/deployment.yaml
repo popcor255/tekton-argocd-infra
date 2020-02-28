@@ -17,7 +17,7 @@ spec:
         version: v1
     spec:
       containers:
-      - image: image-registry.openshift-image-registry.svc:5000/tekton-argocd/app:6550731
+      - image: image-registry.openshift-image-registry.svc:5000/tekton-argocd/app:e7c2120
         imagePullPolicy: Always
         name: ui
         ports:
