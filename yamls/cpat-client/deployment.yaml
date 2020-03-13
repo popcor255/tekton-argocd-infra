@@ -1,0 +1,27 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: cpat-blog-client-deployment
+    version: v1
+  name: cpat-blog-client-deployment
+spec:
+  selector:
+    matchLabels:
+      app: cpat-blog-client
+      version: v1
+  template:
+    metadata:
+      labels:
+        app: cpat-blog-client
+        version: v1
+    spec:
+      containers:
+      - image: image-registry.openshift-image-registry.svc:5000/cpat-blog/cpat-blog-client:0ad2ec7
+        envFrom:
+        - secretRef:
+            name: cpat-blog-secrets
+        imagePullPolicy: Always
+        name: ui
+        ports:
+        - containerPort: 3001
