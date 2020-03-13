@@ -5,9 +5,9 @@ metadata:
     app: ui
   name: ui
 spec:
-  port:
-    targetPort: http
+  path: /
   to:
     kind: Service
-    name: ui
-    weight: 100
+    name: example
+  port:
+    targetPort: 8080
