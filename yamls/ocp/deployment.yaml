@@ -2,9 +2,9 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   labels:
-    app: cpat-blog-client
+    app: cpat-blog-client-deployment
     version: v1
-  name: cpat-blog-client
+  name: cpat-blog-client-deployment
 spec:
   selector:
     matchLabels:
