@@ -20,7 +20,7 @@ spec:
       - envFrom:
         - secretRef:
             name: cpat-blog-secrets
-      - image: image-registry.openshift-image-registry.svc:5000/tekton-argocd/app:e7c2120
+      - image: image-registry.openshift-image-registry.svc:5000/cpat-blog/cpat-blog-client:0ad2ec7
         imagePullPolicy: Always
         name: ui
         ports:
