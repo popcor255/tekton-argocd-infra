@@ -17,10 +17,10 @@ spec:
         version: v1
     spec:
       containers:
-      - envFrom:
+      - image: image-registry.openshift-image-registry.svc:5000/cpat-blog/cpat-blog-client:becc8ff
+        envFrom:
         - secretRef:
             name: cpat-blog-secrets
-      - image: image-registry.openshift-image-registry.svc:5000/cpat-blog/cpat-blog-client:becc8ff
         imagePullPolicy: Always
         name: ui
         ports:
