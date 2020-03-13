@@ -10,4 +10,4 @@ spec:
     kind: Service
     name: example
   port:
-    targetPort: "8080"
+    targetPort: '8080-tcp'
