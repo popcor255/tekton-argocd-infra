@@ -2,8 +2,8 @@ apiVersion: v1
 kind: Service
 metadata:
   labels:
-    app: ui
-  name: ui
+    app: cpat-blog-client
+  name: cpat-blog-client
 spec:
   type: NodePort
   ports:
@@ -11,4 +11,4 @@ spec:
       port: 3001
       targetPort: 3001
   selector:
-    app: ui
+    app: cpat-blog-client
