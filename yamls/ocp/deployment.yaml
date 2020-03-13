@@ -3,6 +3,12 @@ kind: Deployment
 metadata:
   labels:
     app: cpat-blog-client-deployment
+    app.kubernetes.io/component: cpat-blog-client
+    app.kubernetes.io/instance: cpat-blog-client
+    app.kubernetes.io/name: nodejs
+    app.kubernetes.io/part-of: cpat-blog
+    app.openshift.io/runtime: nodejs
+    app.openshift.io/runtime-version: 10-SCL
     version: v1
   name: cpat-blog-client-deployment
 spec:
